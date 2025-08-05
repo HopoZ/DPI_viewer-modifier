@@ -151,7 +151,7 @@ public:
     // 方法4: 通过测量鼠标移动估算DPI
     void EstimateDPIByMovement() {
         std::cout << "\n=== 方法4: 通过移动估算DPI ===" << std::endl;
-        std::cout << "请在接下来的10秒内，将鼠标从屏幕左边缘移动到右边缘..." << std::endl;
+        std::cout << "请在接下来的5秒内，将鼠标从屏幕左边缘移动到右边缘..." << std::endl;
         std::cout << "3秒后开始..." << std::endl;
 
         std::this_thread::sleep_for(std::chrono::seconds(3));
@@ -166,7 +166,7 @@ public:
         GetCursorPos(&startPos);
 
         auto startTime = std::chrono::high_resolution_clock::now();
-        std::this_thread::sleep_for(std::chrono::seconds(10));
+        std::this_thread::sleep_for(std::chrono::seconds(5));
         auto endTime = std::chrono::high_resolution_clock::now();
 
         GetCursorPos(&endPos);
